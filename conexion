@@ -1,0 +1,49 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package modelo;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import java.sql.DriverManager;
+
+
+/**
+ *
+ * @author edwin garcia
+ */
+public class Connection {
+    public final java.sql.Connection conexionBD;
+    public final String puerto = "3306";
+    public final String bd = "empleados";
+    public final String urlConexion= String.format("jdbc:mysql//localhost:3306",puerto,bd);
+    public final String usuario = "root";
+    public final String contra = "Edw43520154";
+    public final String jdbc = "com.mysql.cj.jdbc.Driver";
+    public connection coneccionBD;
+   
+    public void abrir_coneccion(){
+    try{
+        //codigo aqui
+        class.forName(jdbc);
+        coneccionBD =DriverManager.getConnection(urlConexion,usuario,contra);
+    }    catch(Exception ex){
+         System.out.println("algo salio mal"+ ex.getMessage());
+                 }
+    }
+    public void cerrar_coneccion(){
+    }catch (Excepcion ex){
+    System.out.println("algo salio mal"+ ex.getMessage());
+}
+    }
+    
+
+/**
+ *
+ * @author edwin garcia
+ */
+public class conesion {
+    
+}
